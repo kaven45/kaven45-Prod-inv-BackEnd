@@ -18,20 +18,31 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Set up Java version
       - name: Set up Java version
         uses: actions/setup-java@v4
         with:
           java-version: '11'
           distribution: 'microsoft'
 
-      - name: Build with Maven
+      # Build product-service with Maven
+      - name: Build product-service with Maven
         run: mvn clean install
+        working-directory: ./product-service
 
+      # Build users-service with Maven
+      - name: Build users-service with Maven
+        run: mvn clean install
+        working-directory: ./users-service
+
+      # Upload artifact for deployment job (collecting both .jar files)
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: java-app
-          path: '${{ github.workspace }}/target/*.jar'
+          path: |
+            './product-service/target/*.jar'
+            './users-service/target/*.jar'
 
   deploy:
     runs-on: windows-latest
@@ -47,6 +58,7 @@ jobs:
         with:
           name: java-app
       
+      # Login to Azure
       - name: Login to Azure
         uses: azure/login@v2
         with:
@@ -54,12 +66,20 @@ jobs:
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_1D732F7FF0194808AE0EA7883A034C21 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_7632422811DD401E84F2B6A4CF5C1185 }}
 
-      - name: Deploy to Azure Web App
-        id: deploy-to-webapp
+      # Deploy product-service to Azure Web App
+      - name: Deploy product-service to Azure Web App
+        id: deploy-product-service
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'Prod-inv-App'
           slot-name: 'Production'
-          package: 'target/*.jar'
+          package: './product-service/target/*.jar'
 
-          
+      # Deploy users-service to Azure Web App
+      - name: Deploy users-service to Azure Web App
+        id: deploy-users-service
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: 'Prod-inv-App'
+          slot-name: 'Production'
+          package: './users-service/target/*.jar'
