@@ -60,5 +60,6 @@ jobs:
         with:
           app-name: 'Prod-inv-App'
           slot-name: 'Production'
-          package: '*.jar'
+          package: 'target/*.jar'
+
           
