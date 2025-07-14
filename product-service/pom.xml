@@ -37,13 +37,15 @@
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 
-		<!-- Spring Boot Starter Web for building web applications (RESTful services) -->
+		<!-- Spring Boot Starter Web for building web applications (RESTful
+		services) -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<!-- Spring Boot DevTools for automatic restart and other development utilities -->
+		<!-- Spring Boot DevTools for automatic restart and other development
+		utilities -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -51,14 +53,16 @@
 			<optional>true</optional>
 		</dependency>
 
-		<!-- Microsoft SQL Server JDBC Driver for SQL Server database connectivity -->
+		<!-- Microsoft SQL Server JDBC Driver for SQL Server database
+		connectivity -->
 		<dependency>
 			<groupId>com.microsoft.sqlserver</groupId>
 			<artifactId>mssql-jdbc</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 
-		<!-- Spring Boot Starter Test for unit testing, integration testing, etc. -->
+		<!-- Spring Boot Starter Test for unit testing, integration testing,
+		etc. -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -70,14 +74,14 @@
 		<plugins>
 			<!-- Maven Compiler Plugin to specify Java 11 version -->
 			<plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-compiler-plugin</artifactId>
-    <version>3.8.1</version>
-    <configuration>
-        <source>17</source>
-        <target>17</target>
-    </configuration>
-</plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>17</source>
+					<target>17</target>
+				</configuration>
+			</plugin>
 
 
 			<!-- Spring Boot Maven Plugin to create a runnable jar -->
