@@ -1,0 +1,5 @@
+# Created at 2025-07-14T16:11:52.650
+Boot Manifest-JAR contains absolute paths in classpath 'K:\Prod-inv-mngt deployment\product-inventory-management-team4\ProductInventoryManagement-Backend\product-service\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

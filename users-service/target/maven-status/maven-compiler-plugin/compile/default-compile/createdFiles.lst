@@ -1,0 +1,7 @@
+com\wipro\dto\LoginRequest.class
+com\wipro\UsersServiceApplication.class
+com\wipro\repository\UserRepository.class
+com\wipro\service\UserService.class
+com\wipro\model\User.class
+com\wipro\config\SecurityConfig.class
+com\wipro\controller\UserController.class

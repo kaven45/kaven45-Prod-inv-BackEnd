@@ -1,0 +1,7 @@
+K:\Prod-inv-mngt deployment\product-inventory-management-team4\ProductInventoryManagement-Backend\product-service\src\main\java\com\wipro\controller\ProductController.java
+K:\Prod-inv-mngt deployment\product-inventory-management-team4\ProductInventoryManagement-Backend\product-service\src\main\java\com\wipro\exception\GlobalExceptionHandler.java
+K:\Prod-inv-mngt deployment\product-inventory-management-team4\ProductInventoryManagement-Backend\product-service\src\main\java\com\wipro\exception\ProductNotFoundException.java
+K:\Prod-inv-mngt deployment\product-inventory-management-team4\ProductInventoryManagement-Backend\product-service\src\main\java\com\wipro\model\Product.java
+K:\Prod-inv-mngt deployment\product-inventory-management-team4\ProductInventoryManagement-Backend\product-service\src\main\java\com\wipro\ProductServiceApplication.java
+K:\Prod-inv-mngt deployment\product-inventory-management-team4\ProductInventoryManagement-Backend\product-service\src\main\java\com\wipro\repository\ProductRepository.java
+K:\Prod-inv-mngt deployment\product-inventory-management-team4\ProductInventoryManagement-Backend\product-service\src\main\java\com\wipro\service\ProductService.java
